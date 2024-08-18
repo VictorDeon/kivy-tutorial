@@ -13,8 +13,36 @@ Baixe a extensão:
 
 #### Onde as configurações do kivy é criado em cada S.O
 
+É um conjunto de propriedades que é lida pela aplicação quando a mesma é executada.
+
 * **Windows**: C:\Users\\`<username>`\\.kivy\config.ini
 * **OS X**: /Users/`<username>`/.kivy/config.ini
 * **Linux**: /home/`<username>`/.kivy/config.ini
 * **Android**: /data/data/org.kivy.launcher/files/.kivy/config.ini
 * **iOS**: `<HOME_DIRECTORY>`/Documents/.kivy/config.ini
+
+#### Modulo inspect
+
+Dentro do arquivo `config.ini` podemos definir o seguinte código para fazer debug, só lembre-de remove-lo no deploy.
+
+```
+[module]
+inspect =
+```
+
+Com isso dentro da aplicação ao dar `Ctrl + E` irá aparecer um widget para inserção dos elementos da tela muito útil para o desenvolvimento.
+
+O ideal é modificar essas configurações dentro da sua aplicação caso for necessário.
+
+#### Modulo screen
+
+Vamos simular as características de algum dispositivo ao executar o projeto.
+
+```sh
+# Lista os screens disponíveis
+python main.py -m screen
+# Simula o screen
+python main.py -m screen:<device-id>
+```
+
+Ao executar, será exibido no console a lista de todos os screens que estão cadastrados.
