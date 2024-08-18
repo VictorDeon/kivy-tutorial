@@ -1,9 +1,8 @@
 ## Posicionamento
-***
 
-O sistema de posicionamento do kivy segue o plano cartesiano X, Y sendo que o X=0 e Y=0 fica no canto inferior esquerdo da tela.
+O sistema de posicionamento do kivy segue o plano cartesiano `X`, `Y` sendo que o `X=0` e `Y=0` fica no canto inferior esquerdo da tela.
 
-Só é exibido na tela os itens que tiver o posicionamento de X e Y maior que zero e menor que o limite de resolução da tela.
+Só é exibido na tela os itens que tiver o posicionamento de `X` e `Y` maior que zero e menor que o limite de resolução da tela.
 
 A resolução da tela é o valor máximo em X e Y que a tela pode chegar em pixel. Ex: resolução 1280x720 quer dizer que a tela pode chegar a 1280 pixels na horizontal (eixo X) e 720 pixels na vertical (eixo Y) do plano cartesiano, se passar disso fica fora da tela.
 
@@ -13,7 +12,7 @@ Os widgets terão seu ponto de origem tb no lado inferior esquerdo, ou seja, que
 - O canto superior esquerdo do widget terá [X, Y + Height]
 - O canto inferior direito do widget terá  [X + Width, Y]
 
-Grid Layout: Os componentes vão se ajustando em blocos e se dimensionando automaticamente a medida que forem crescendo.
+**Grid Layout**: Os componentes vão se ajustando em blocos e se dimensionando automaticamente a medida que forem crescendo.
 
 Podemos usar como referência para o posicionamento no plano cartesiano dos widgets o centro, topo e o canto superior direito também.
 
@@ -22,7 +21,7 @@ Podemos usar como referência para o posicionamento no plano cartesiano dos widg
 Propriedades com sufixo hint significam que os valores devem ser definidos em percentual.
 
 Exemplo:
-- `pos_hint: {'x': .1, 'y': .09}`: É a propriedade que espera um dicionário com os eixos x e y associados a valores percentuais. 
+- `pos_hint: {'x': .1, 'y': .09}`: É a propriedade que espera um dicionário com os eixos X e Y associados a valores percentuais. 
 
 Os valores percentuais devem estar no intervalo de 0.0 a 1.0
 
@@ -101,16 +100,13 @@ certer_y: 100
 center: 200, 100
 ```
 
-***
 ## Sistemas de Medida:
-***
 
-- Pixel (px): Medida padrão
+- **Pixel (px)**: Medida padrão
 
-- Pixel Independente de Densidade (dp): Faz com que o nosso botão seja exibido físicamente com o mesmo tamanho
-independente da resolução da tela. Garante o mesmo posicionamento e dimensão, indiferente da resolução da tela.
+- **Pixel Independente de Densidade (dp)**: Faz com que o nosso botão seja exibido físicamente com o mesmo tamanho independente da resolução da tela. Garante o mesmo posicionamento e dimensão, indiferente da resolução da tela.
 
-- Escala Independente de Pixel (sp): É o sistema de medida do tamanho da fonte, funciona igual ao DP.
+- **Escala Independente de Pixel (sp)**: É o sistema de medida do tamanho da fonte, funciona igual ao DP.
 
 #### Valor percentual
 
@@ -135,7 +131,7 @@ A propriedade `width` especifica a largura absoluta e a `height` a altura absolu
 
 Temos a propriedade `size` que especifica a largura e altura absoluta como uma tupla.
 
-Temos que definir o `size_hint` como None para poder definir o valor absoluto.
+Temos que definir o `size_hint` como `None` para poder definir o valor absoluto.
 
 Exemplo:
 
