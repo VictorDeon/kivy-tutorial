@@ -1,5 +1,15 @@
 from kivy.uix.boxlayout import BoxLayout
 
+KVLANG = """
+<Screen02>:
+    orientation: "vertical"
+    Button:
+        text: f"Clique {root.clicked_btn} vez"
+        id: btn01
+        # Aqui acessamos o método on_press_btn definida na classe Screen02
+        on_press: root.on_press_btn()
+"""
+
 
 class Screen02(BoxLayout):
     clicked_btn = 1
