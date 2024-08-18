@@ -1,0 +1,11 @@
+#:include ./screen02.kv
+
+# Aqui com as tags <...> estamos só definindo o construtor da classe que já existe em python
+# como foi feito no exemplo01.py
+<Screen01>:
+    orientation: "vertical"
+    Button:
+        text: "Clique me"
+        # Aqui acessamos o método on_press_btn definida na classe Screen01
+        on_press: root.on_press_btn()
+        color: "yellow"

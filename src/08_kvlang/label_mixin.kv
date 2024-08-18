@@ -1,0 +1,13 @@
+# Constante
+#:set x "path"
+# Importação de pacote python "import alias pacote"
+#:import sistema_operacional os
+
+
+# Mixins para herança
+<LabelTextMixin@Label>:
+    text: f"Label {x} - {sistema_operacional.getcwd()}"
+
+
+<LabelColorMixin@Label>:
+    color: "yellow"

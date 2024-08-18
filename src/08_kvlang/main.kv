@@ -1,20 +1,34 @@
-<RootWidget>:
-    Button:
-        # Não queremos definir o size de forma percentual
-        size_hint: None, None
-        # L x H
-        size: 350, 50
-        x: 100
-        y: 350
-        text: "px"
+# Inclui o código de outro arquivo kv dentro desse arquivo passando seu path
+#:include ./label_mixin.kv
+#:include ./screen01.kv
 
-    Button:
-        size_hint: None, None
-        size: dp(350), dp(50)
-        pos: dp(80), dp(200)
-        text: "dp"
+# Herança multipla usamos o +
+<MeuLabel@LabelTextMixin+LabelColorMixin>:
 
+
+# Podemos herdar widgets
+<MeuBotao@Button>:
+    text: "Sair"
+    on_press: app.exit()
+
+
+# Podemos herdar tb layouts
+<TelaBtns@BoxLayout>:
     Button:
-        size_hint: .5, .09
-        pos_hint: {"x": .1, "y": .1}
-        text: "%"
+        text: "Tabuada"
+        on_press: self.tabuada(7)
+
+    MeuBotao:
+
+
+BoxLayout:
+    orientation: "vertical"
+    MeuLabel:
+
+    TelaBtns:
+        orientation: "horizontal"
+
+    TelaBtns:
+        orientation: "vertical"
+
+    Screen01:

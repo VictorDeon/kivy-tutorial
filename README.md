@@ -34,6 +34,12 @@ Com isso dentro da aplicação ao dar `Ctrl + E` irá aparecer um widget para in
 
 O ideal é modificar essas configurações dentro da sua aplicação caso for necessário.
 
+```py
+from kivy.config import Config
+Config.set("class", "key", "value")
+Config.set("modules", "inspect", "")
+```
+
 #### Modulo screen
 
 Vamos simular as características de algum dispositivo ao executar o projeto.
@@ -46,3 +52,16 @@ python main.py -m screen:<device-id>
 ```
 
 Ao executar, será exibido no console a lista de todos os screens que estão cadastrados.
+
+#### Modulo console
+
+Analisa a estrutura hierarquica de componentes de uma janela.
+
+Dentro do arquivo `config.ini` devemos definir o seguinte código, só lembre-de remove-lo no deploy.
+
+```
+[module]
+console =
+```
+
+Com isso dentro da aplicação ao dar `Ctrl + E` irá aparecer um widget, nesse widget tem um botão `Tree` que nos permite ver a estrutura hierarquica de componentes da aplicação. bastente útil para desenvolvimento para ver o fluxo de passagem de telas.
