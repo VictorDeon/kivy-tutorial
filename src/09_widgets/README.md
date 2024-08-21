@@ -47,3 +47,20 @@ A propriedade orientation pode assumir 8 valores:
 * bt-rl (bottom-top e right-left)
 
 Se a stack passar do tamanho da tela ela vai continuar sem dar error, porém a tela não vai mostrar o restante que ultrapassar.
+
+***
+### Grid Layout
+***
+
+Posiciona os componentes adicionados na forma de grade formando linhas e colunas, assim como é feito no excel. O gerenciado que irá ser responsável por gerenciar o posicionamento dos widgets.
+
+#### Grid 2x2 (Linhas x Colunas)
+
+![Capturar](https://github.com/user-attachments/assets/d37a2ffc-ee98-4a41-b73e-5f76289d1c3d)
+
+#### Grid 2x3 (Linhas x Colunas)
+
+![Capturar](https://github.com/user-attachments/assets/486ee0a8-4c71-4a88-8d68-0cb586f18a3b)
+
+Se definimos a quantidade de colunas e não a de linhas, as linhas serão adicionadas conforme necessário e automaticamente.
+O oposto tb se aplica caso tenhamos definido linhas e não colunas.
