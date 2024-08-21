@@ -2,6 +2,8 @@
 
 O sistema de posicionamento do kivy segue o plano cartesiano `X`, `Y` sendo que o `X=0` e `Y=0` fica no canto inferior esquerdo da tela.
 
+![Capturar](https://github.com/user-attachments/assets/2ebdb595-1ebb-47de-8af7-beb58df73d9d)
+
 Só é exibido na tela os itens que tiver o posicionamento de `X` e `Y` maior que zero e menor que o limite de resolução da tela.
 
 A resolução da tela é o valor máximo em X e Y que a tela pode chegar em pixel. Ex: resolução 1280x720 quer dizer que a tela pode chegar a 1280 pixels na horizontal (eixo X) e 720 pixels na vertical (eixo Y) do plano cartesiano, se passar disso fica fora da tela.
