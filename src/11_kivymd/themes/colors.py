@@ -1,6 +1,5 @@
 from kivy.lang import Builder
 from kivy.properties import ListProperty, StringProperty
-
 from kivymd.color_definitions import colors
 from kivymd.uix.tab import MDTabsBase
 from kivymd.uix.boxlayout import MDBoxLayout
